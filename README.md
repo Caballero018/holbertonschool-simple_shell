@@ -1,4 +1,8 @@
 # Proyect simple shell
+## Description:
+In this project what we will do is create a shell.
+* ### What is a shell?
+  Shell is the programming layer that understands and executes the commands that a user enters. On some systems, the shell is called a command interpreter.
 
 ## Project Requirements (general)
 * Allowed editors: ```vi```, ```vim```, ```emacs```.
@@ -68,6 +72,8 @@ $
 ## Compilation
 Your shell will be compiled this way:
 > gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+
+___
 
 ## Steps to create the simple shell
 1. We create the ```prompt``` (The indicator).
