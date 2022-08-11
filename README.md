@@ -1,8 +1,8 @@
 # Proyect simple shell
 ## Description:
 In this project what we will do is create a shell.
-* ### What is a shell?
-  Shell is the programming layer that understands and executes the commands that a user enters. On some systems, the shell is called a command interpreter.
+> ### What is a shell?
+> Shell is the programming layer that understands and executes the commands that a user enters. On some systems, the shell is called a command interpreter. 
 
 ## Project Requirements (general)
 * Allowed editors: ```vi```, ```vim```, ```emacs```.
