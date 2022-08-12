@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char *pront = "S͜͡H̑̈Ⓔ︎𝗟ꪶ $:", *line = NULL;
+	char *pront = "✞𝓓𝖔𝖓✞ $:", *line = NULL;
 	size_t line_size = 0;
 
 
