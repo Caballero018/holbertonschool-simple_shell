@@ -13,14 +13,15 @@ int main(void)
 
 	while (1)
 	{
-		if (isatty(1))
-			printf("%s", pront);
+		if (isatty(STDIN_FILENO))
+				printf("%s", pront);
 
-		if (!isatty(1))
-			break;
 		getline(&line, &line_size, stdin);
-		printf("la línea leida es: %s\n", line);
+                printf("la línea es: %s\n", line);	
+
+		if (!isatty(STDIN_FILENO))
+			break;
 
 	}
-	return (0);
+	return (EXIT_SUCCESS);
 }
