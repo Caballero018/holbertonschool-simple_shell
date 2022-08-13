@@ -20,8 +20,6 @@ int main(void)
 
 		if (!isatty(STDIN_FILENO))
 			break;
-		free(buffer);
-
 	}
 	return (EXIT_SUCCESS);
 }
