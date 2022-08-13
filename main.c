@@ -9,6 +9,7 @@ int main(void)
 {
 	char *pront = "(╬ ಠ益ಠ): ", *line = NULL, *argv[] = {"/bin/ls", NULL};
 	size_t line_size = 0;
+	pid_t id;
 
 	while (1)
 	{
@@ -17,10 +18,14 @@ int main(void)
 
 		getline(&line, &line_size, stdin);
 
-		if (execve(argv[0], argv, NULL) == -1)
-                                printf("Error:");
-                        printf("After execve\n");
-
+		id = fork();
+		if (id == 0)
+		{
+			if (execve(argv[0], argv, NULL) == -1)
+				perror("Error:");
+			printf("after excue\n");
+		}
+		wait(NULL);
 		if (!isatty(STDIN_FILENO))
 			break;
 	}
