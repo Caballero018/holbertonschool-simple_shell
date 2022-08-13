@@ -8,6 +8,7 @@
 int main(void)
 {
 	char *pront = "(╬ ಠ益ಠ): ", *line = NULL, *argv[] = {"/bin/ls", NULL};
+	char delim[] = " ", *token;
 	size_t line_size = 0;
 	pid_t id;
 
