@@ -10,17 +10,17 @@ int main(void)
 	char *pront = "(╬ ಠ益ಠ):", *line = NULL;
 	size_t line_size = 0;
 
-
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
-				printf("%s", pront);
+			printf("%s", pront);
 
 		getline(&line, &line_size, stdin);
-                printf("la línea es: %s", line);	
+		printf("la línea es: %s", line);
 
 		if (!isatty(STDIN_FILENO))
 			break;
+		free(buffer);
 
 	}
 	return (EXIT_SUCCESS);
