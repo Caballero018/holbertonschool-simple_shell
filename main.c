@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char *pront = "(╬ ಠ益ಠ):", *line = NULL;
+	char *pront = "(╬ ಠ益ಠ): ", *line = NULL, *argv[] = {"/bin/ls", NULL};
 	size_t line_size = 0;
 
 	while (1)
@@ -16,7 +16,10 @@ int main(void)
 			printf("%s", pront);
 
 		getline(&line, &line_size, stdin);
-		printf("la línea es: %s\n", line);
+
+		if (execve(argv[0], argv, NULL) == -1)
+                                printf("Error:");
+                        printf("After execve\n");
 
 		if (!isatty(STDIN_FILENO))
 			break;
