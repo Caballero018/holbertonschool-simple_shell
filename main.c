@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char *pront = "✞𝓓𝖔𝖓✞ $:", *line = NULL;
+	char *pront = "(╬ ಠ益ಠ):", *line = NULL;
 	size_t line_size = 0;
 
 
