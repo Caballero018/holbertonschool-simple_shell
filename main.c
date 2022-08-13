@@ -17,7 +17,7 @@ int main(void)
 				printf("%s", pront);
 
 		getline(&line, &line_size, stdin);
-                printf("la línea es: %s\n", line);	
+                printf("la línea es: %s", line);	
 
 		if (!isatty(STDIN_FILENO))
 			break;
