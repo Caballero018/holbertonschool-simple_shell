@@ -8,5 +8,7 @@
 #include <sys/wait.h>
 
 char *get_command(void);
+char **tk_cm(char *comand, char *delim);
+int count_word(char *strn);
 
 #endif /* MAIN_H */

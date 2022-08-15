@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char *pront = "(╬ ಠ益ಠ): ", *command = NULL;
+	char *pront = "(╬ ಠ益ಠ): ", *command = NULL, **list_token = NULL;
 
 	while (1)
 	{
@@ -16,6 +16,7 @@ int main(void)
 		command = get_command();
 		if (command == NULL)
 			continue;
+		list_token = tk_cm(command, " \n\t");
 
 		if (!isatty(STDIN_FILENO))
 			break;
