@@ -23,6 +23,7 @@ int count_word(char *strn)
 	}
 	return (word);
 }
+
 char **tk_cm(char *comand, char *delim)
 {
 	char **token = NULL;
@@ -42,7 +43,7 @@ char **tk_cm(char *comand, char *delim)
 		free (token);
 		return(NULL);
 	}
-	for (i = 1; i < word + 1; i++);
-	token[i] = strtok(NULL, delim);
+	for (i = 1; i < word + 1; i++)
+		token[i] = strtok(NULL, delim);
 	return (token);
 }
