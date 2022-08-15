@@ -7,26 +7,16 @@
  */
 int main(void)
 {
-	char *pront = "(╬ ಠ益ಠ): ", *line = NULL, *argv[] = {"/bin/ls", NULL};
-	char delim[] = " ", *token;
-	size_t line_size = 0;
-	pid_t id;
+	char *pront = "(╬ ಠ益ಠ): ", *command = NULL;
 
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
 			printf("%s", pront);
+		command = get_command();
+		if (command == NULL)
+			continue;
 
-		getline(&line, &line_size, stdin);
-
-		id = fork();
-		if (id == 0)
-		{
-			if (execve(argv[0], argv, NULL) == -1)
-				perror("Error:");
-			printf("after excue\n");
-		}
-		wait(NULL);
 		if (!isatty(STDIN_FILENO))
 			break;
 	}
