@@ -26,6 +26,20 @@ int count_word(char *strn)
 }
 
 /**
+ */
+void free_tokens(char **token)
+{
+	int i = 0;
+
+	while (token[i] != NULL)
+	{
+		free(token[i]);
+		i++;
+	}
+	free(token);
+}
+
+/**
  * **tk_cm - is the tokenize of the line
  * @comand: is a pointer the command received
  * @delim: is a pointer to the delimiter of the tokenize
