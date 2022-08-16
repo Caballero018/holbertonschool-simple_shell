@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * get_command -
- *
- * Return:
+ * get_command - is the getline of the shell
+ * Return: in the part of EOF return the buffer
  */
 char *get_command(void)
 {

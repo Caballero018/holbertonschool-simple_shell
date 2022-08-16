@@ -1,7 +1,8 @@
 #include "main.h"
-
 /**
- *
+ * count_word - count a word in the string
+ * @strn: is a pointer of the incoming string
+ * Return: the number of words
  */
 int count_word(char *strn)
 {
@@ -24,6 +25,12 @@ int count_word(char *strn)
 	return (word);
 }
 
+/**
+ * **tk_cm - is the tokenize of the line
+ * @comand: is a pointer the command received
+ * @delim: is a pointer to the delimiter of the tokenize
+ * Return: 0 for free, and return the result of the tokenize
+ */
 char **tk_cm(char *comand, char *delim)
 {
 	char **token = NULL;
@@ -35,13 +42,13 @@ char **tk_cm(char *comand, char *delim)
 	if (token == NULL)
 	{
 		free(token);
-		return(NULL);
+		return (NULL);
 	}
 	token[0] = strtok(comand, delim);
 	if (token[0] == NULL)
 	{
-		free (token);
-		return(NULL);
+		free(token);
+		return (NULL);
 	}
 	for (i = 1; i < word + 1; i++)
 		token[i] = strtok(NULL, delim);
