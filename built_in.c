@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * exit_ins - exit command.
- * Return: nothing.
+ * exit_func - exit command.
+ * Return: 1.
  */
 int exit_func(void)
 {
@@ -10,9 +10,9 @@ int exit_func(void)
 }
 
 /**
- * env_ins - write variable enviromen.
+ * env_func - write variable enviromen.
  *
- * Return: Always int.
+ * Return: 0.
  */
 int env_func(void)
 {
@@ -28,6 +28,11 @@ int env_func(void)
 }
 
 /**
+ * get_built_in - Selects the correct function, based on the ones
+ * set by the user.
+ *
+ * @s: format.
+ * Return: 0
  *
  */
 int (*get_built_in(char *s))(void)
@@ -46,7 +51,11 @@ int (*get_built_in(char *s))(void)
 }
 
 /**
+ * check_built_in - check built in
  *
+ * @f: Function to check.
+ * @buffer: Space in memory.
+ * @command: Command.
  */
 void check_built_in(int (*f)(), char **buffer, char *command)
 {

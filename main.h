@@ -11,6 +11,12 @@
 
 extern char **environ;
 
+/**
+ * struct built_in - Struct built_in
+ *
+ * @key: Variable.
+ * @f: Function.
+ */
 typedef struct built_in
 {
 	char *key;
