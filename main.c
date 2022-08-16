@@ -32,21 +32,14 @@ int main(void)
 				free_tokens(list_token);
 				continue;
 			}
-			else
-			{
-				free(path);
-				free(list_token);
-				free(command);
-				continue; 
-			}
+			free(path);
+			free(list_token);
+			free(command);
+			continue;
 		}
-		else
-		{
 			free(path);
 			free_tokens(list_token);
 			continue;
-		}
-
 		if (!isatty(STDIN_FILENO))
 			break;
 	}
