@@ -1,7 +1,13 @@
 #include "main.h"
+#include <stdlib.h>
+
 /**
+ * get_env - get env
+ *
+ * Return: NULL.
+ *
  */
-char *_getenv(void)
+char *get_env(void)
 {
 	int i = 0;
 	char *path = NULL;
@@ -19,14 +25,19 @@ char *_getenv(void)
 }
 
 /**
+ * path_d - function
+ *
+ * @comd: dsaf
+ * Return: dfsa
  */
-char *_path_dir(char *comd)
+char *path_d(char *comd)
 {
-	char *path = NULL, **rout = NULL, *comand = NULL;
+	char *path = NULL, **rout = NULL;
+	char *comand = NULL;
 	int i = 1;
 	struct stat st;
 
-	path = _getenv();
+	path = get_env();
 	rout = tk_cm(path, "=:");
 	while (rout[i] != NULL)
 	{
@@ -56,6 +67,6 @@ char *_path_dir(char *comd)
 		i++;
 	}
 	free(path);
-	free (rout);
+	free(rout);
 	return (NULL);
 }
