@@ -12,7 +12,7 @@
 
 extern char **environ;
 
-**
+/**
  * struct built_in - Struct built_in
  *
  * @key: Variable.
@@ -32,10 +32,9 @@ int (*get_built_in(char *s))(void);
 int exit_func(void);
 int env_func(void);
 void check_built_in(int (*f)(), char **buffer, char *command);
-char *_getenv(void);
-char *_path_dir(char *comd);
+char *path_d(char *comd);
 void error_input(int err_no, char *copy);
 int execut(char **list_token, char *path);
-void free_tok(char **token);
+char *get_env(void);
 
 #endif /* MAIN_H */
