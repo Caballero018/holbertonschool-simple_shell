@@ -12,7 +12,7 @@
 
 extern char **environ;
 
-/**
+**
  * struct built_in - Struct built_in
  *
  * @key: Variable.
@@ -36,5 +36,6 @@ char *_getenv(void);
 char *_path_dir(char *comd);
 void error_input(int err_no, char *copy);
 int execut(char **list_token, char *path);
+void free_tok(char **token);
 
 #endif /* MAIN_H */
