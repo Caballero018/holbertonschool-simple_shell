@@ -39,6 +39,8 @@ char *path_d(char *comd)
 
 	path = get_env();
 	rout = tk_cm(path, "=:");
+	if (!path)
+		return (NULL);
 	while (rout[i] != NULL)
 	{
 		if (stat(comd, &st) == 0)
