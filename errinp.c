@@ -26,6 +26,9 @@ void error_input(int err_no, char *copy)
 		strcat(msj_error, ": not found\n");
 		length = strlen(msj_error);
 		write(1, msj_error, (length + 1));
+
+		if (isatty(STDIN_FILENO) != 1)
+			exit(127);
 	}
 	else
 		perror(msj_error);

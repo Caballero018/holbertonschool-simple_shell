@@ -8,9 +8,6 @@ int execut(char **list_token, char *path)
 
 	pidC = fork();
 
-	if (!pidc)
-		printf("./hsh: 1: hbtn: not found");
-
 	if (pidC == -1)
 	{
 		perror("Creation of a child process was unsuccessful!");
