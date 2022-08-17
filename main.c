@@ -19,6 +19,8 @@ int main(void)
 		if (command == NULL)
 			continue;
 		list_token = tk_cm(command, " \n\t");
+		if (!list_token)
+			continue;
 		func = get_built_in(list_token[0]);
 		check_built_in(func, list_token, command);
 		path = path_d(list_token[0]);

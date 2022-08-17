@@ -52,7 +52,7 @@ char **tk_cm(char *comand, char *delim)
 
 	word = count_word(comand);
 
-	token = malloc(sizeof(char *) * (word + 1));
+	token = calloc((word + 1), sizeof(char));
 	if (token == NULL)
 	{
 		free(token);
