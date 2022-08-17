@@ -1,5 +1,9 @@
 #include "main.h"
 /**
+ * error_input - deasa
+ *
+ * @err_no: erres
+ * @copy: dsf
  */
 void error_input(int err_no, char *copy)
 {
