@@ -16,13 +16,10 @@ int execut(char **list_token, char *path)
 	if (pidC == 0)
 	{
 		if (execve(path, list_token, environ) == -1)
-		{
 			return (-1);
-		}
 	}
-	else
-	{
-		wait(&status);
-	}
+
+	wait(&status);
+
 	return (0);
 }

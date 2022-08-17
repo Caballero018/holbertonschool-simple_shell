@@ -6,7 +6,7 @@
  */
 int exit_func(void)
 {
-	return (1);
+	exit(EXIT_SUCCESS);
 }
 
 /**
