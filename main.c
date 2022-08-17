@@ -33,8 +33,7 @@ int main(void)
 			{
 				error_numbs = errno;
 				error_input(error_numbs, command);
-				free(path);
-				free_tokens(list_token);
+				freess(path, list_token);
 				continue;
 			}
 			free(path);
@@ -42,9 +41,9 @@ int main(void)
 			free(command);
 			continue;
 		}
-			free(path);
-			free_tokens(list_token);
-			continue;
+		free(path);
+		free_tokens(list_token);
+		continue;
 		if (!isatty(STDIN_FILENO))
 			break;
 	}

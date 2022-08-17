@@ -38,9 +38,9 @@ char *path_d(char *comd)
 	struct stat st;
 
 	path = get_env();
-	rout = tk_cm(path, "=:");
 	if (!path)
 		return (NULL);
+	rout = tk_cm(path, "=:");
 	while (rout[i] != NULL)
 	{
 		if (stat(comd, &st) == 0)

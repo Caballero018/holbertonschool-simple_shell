@@ -36,5 +36,6 @@ char *path_d(char *comd);
 void error_input(int err_no, char *copy);
 int execut(char **list_token, char *path);
 char *get_env(void);
+void freess(char *path, char **list_token);
 
 #endif /* MAIN_H */

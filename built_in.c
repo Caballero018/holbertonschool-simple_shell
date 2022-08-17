@@ -60,10 +60,11 @@ int (*get_built_in(char *s))(void)
 void check_built_in(int (*f)(), char **buffer, char *command)
 {
 	if (f)
+	{
 		if (f() == 1)
 		{
 			free(command);
 			free(buffer);
-			exit(127);
 		}
+	}
 }

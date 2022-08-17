@@ -55,7 +55,6 @@ char **tk_cm(char *comand, char *delim)
 	token = calloc((word + 1), sizeof(char *));
 	if (token == NULL)
 	{
-		free(token);
 		return (NULL);
 	}
 	token[0] = strtok(comand, delim);
