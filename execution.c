@@ -21,5 +21,5 @@ int execut(char **list_token, char *path)
 
 	wait(&status);
 
-	return (0);
+	return (status);
 }

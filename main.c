@@ -46,7 +46,6 @@ int main(void)
 			continue;
 		}
 		freess(path, list_token);
-		continue;
 		if (!isatty(STDIN_FILENO))
 			break;
 	}
