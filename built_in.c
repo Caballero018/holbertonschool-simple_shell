@@ -6,7 +6,7 @@
  */
 int exit_func(void)
 {
-	exit(WEXITSTATUS(STATUS));
+	return (1);
 }
 
 /**
@@ -59,6 +59,12 @@ int (*get_built_in(char *s))(void)
  */
 void check_built_in(int (*f)(), char **buffer, char *command)
 {
+	if (f == exit_func)
+	{
+		free(command);
+		free(buffer);
+		exit(WEXITSTATUS(STATUS));
+	}
 	if (f)
 	{
 		if (f() == 1)
