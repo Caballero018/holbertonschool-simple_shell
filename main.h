@@ -10,6 +10,10 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+int status;
+
+#define STATUS status
+
 extern char **environ;
 
 /**
@@ -33,7 +37,7 @@ int exit_func(void);
 int env_func(void);
 void check_built_in(int (*f)(), char **buffer, char *command);
 char *path_d(char *comd);
-void error_input(int err_no, char *copy);
+void error_input(char *copy);
 int execut(char **list_token, char *path);
 char *get_env(void);
 void freess(char *path, char **list_token);

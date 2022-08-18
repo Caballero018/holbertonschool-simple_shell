@@ -5,7 +5,7 @@
  * @err_no: erres
  * @copy: dsf
  */
-void error_input(int err_no, char *copy)
+void error_input(char *copy)
 {
 	char *msj_error;
 	int length = 0;
@@ -21,14 +21,10 @@ void error_input(int err_no, char *copy)
 	strcat(msj_error, ": ");
 	strcat(msj_error, copy);
 
-	if (err_no == 14)
-	{
-		strcat(msj_error, ": not found\n");
-		length = strlen(msj_error);
-		write(1, msj_error, (length + 1));
-	}
-	if (isatty(STDIN_FILENO) != 1)
-		exit(127);
-	perror(msj_error);
+	strcat(msj_error, ": not found\n");
+	length = strlen(msj_error);
+	write(1, msj_error, (length + 1));
+	STATUS = 32512;
+
 	free(msj_error);
 }

@@ -6,7 +6,7 @@
  */
 int exit_func(void)
 {
-	exit(EXIT_SUCCESS);
+	exit(WEXITSTATUS(STATUS));
 }
 
 /**

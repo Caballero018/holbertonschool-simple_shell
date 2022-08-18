@@ -69,6 +69,6 @@ char *path_d(char *comd)
 	}
 	free(path);
 	free(rout);
-	error_input(1, comd);
+	error_input(comd);
 	return (NULL);
 }

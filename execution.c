@@ -4,7 +4,6 @@
 int execut(char **list_token, char *path)
 {
 	pid_t pidC;
-	int status;
 
 	pidC = fork();
 
@@ -18,8 +17,9 @@ int execut(char **list_token, char *path)
 		if (execve(path, list_token, environ) == -1)
 			return (-1);
 	}
-
-	wait(&status);
+	else
+		wait(&status);
+	STATUS = status;
 
 	return (status);
 }

@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int (*func)(), error_numbs;
+	int (*func)();
 	char *pront = "(╬ ಠ益ಠ): ", *command = NULL, **list_token = NULL;
 	char *path = NULL;
 
@@ -35,8 +35,7 @@ int main(void)
 		{
 			if (execut(list_token, path) == -1)
 			{
-				error_numbs = errno;
-				error_input(error_numbs, command);
+				error_input(command);
 				freess(path, list_token);
 				continue;
 			}
@@ -49,5 +48,5 @@ int main(void)
 		if (!isatty(STDIN_FILENO))
 			break;
 	}
-	return (EXIT_SUCCESS);
+	return (WEXITSTATUS(STATUS));
 }

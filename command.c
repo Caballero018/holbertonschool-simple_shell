@@ -14,7 +14,7 @@ char *get_command(void)
 	if (lenght == EOF)
 	{
 		free(buffer);
-		exit(0);
+		exit(WEXITSTATUS(STATUS));
 	}
 	return (buffer);
 }
