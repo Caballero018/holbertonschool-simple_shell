@@ -65,8 +65,6 @@ void check_built_in(int (*f)(), char **buffer, char *command)
 		{
 			free(command);
 			free(buffer);
-			if (isatty(STDIN_FILENO) != 1)
-				exit(127);
 		}
 	}
 }

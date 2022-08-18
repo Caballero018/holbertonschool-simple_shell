@@ -27,6 +27,8 @@ void error_input(int err_no, char *copy)
 		length = strlen(msj_error);
 		write(1, msj_error, (length + 1));
 	}
+	if (isatty(STDIN_FILENO) != 1)
+		exit(127);
 	perror(msj_error);
 	free(msj_error);
 }
