@@ -41,8 +41,7 @@ int main(void)
 			free(command);
 			continue;
 		}
-		free(path);
-		free_tokens(list_token);
+		freess(path, list_token);
 		continue;
 		if (!isatty(STDIN_FILENO))
 			break;
