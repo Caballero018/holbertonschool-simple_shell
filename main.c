@@ -39,9 +39,7 @@ int main(void)
 				freess(path, list_token);
 				continue;
 			}
-			free(path);
-			free(list_token);
-			free(command);
+			freesss(path, list_token, command);
 			continue;
 		}
 		freess(path, list_token);

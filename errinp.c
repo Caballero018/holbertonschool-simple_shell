@@ -22,8 +22,8 @@ void error_input(char *copy)
 	strcat(msj_error, copy);
 
 	strcat(msj_error, ": not found\n");
-	length = strlen(msj_error) - 1;
-	write(1, msj_error, (length + 1));
+	length = strlen(msj_error);
+	write(2, msj_error, (length));
 	STATUS = 32512;
 
 	free(msj_error);

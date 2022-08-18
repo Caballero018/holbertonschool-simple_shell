@@ -41,5 +41,6 @@ void error_input(char *copy);
 int execut(char **list_token, char *path);
 char *get_env(void);
 void freess(char *path, char **list_token);
+void freesss(char *path, char **list_token, char *command);
 
 #endif /* MAIN_H */
