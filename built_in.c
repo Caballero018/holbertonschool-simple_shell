@@ -47,7 +47,7 @@ int (*get_built_in(char *s))(void)
 	for (i = 0; func[i].key != NULL; i++)
 		if (strcmp(func[i].key, s) == 0)
 			return (func[i].f);
-	return (0);
+	return (NULL);
 }
 
 /**

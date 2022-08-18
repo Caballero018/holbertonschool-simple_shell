@@ -25,7 +25,11 @@ int main(void)
 			continue;
 		}
 		func = get_built_in(list_token[0]);
-		check_built_in(func, list_token, command);
+		if (func)
+		{
+			check_built_in(func, list_token, command);
+			continue;
+		}
 		path = path_d(list_token[0]);
 		if (path)
 		{

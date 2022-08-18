@@ -37,19 +37,18 @@ char *path_d(char *comd)
 	int i = 1;
 	struct stat st;
 
+	if (stat(comd, &st) == 0)
+	{
+		comand = strdup(comd);
+		return (comand);
+	}
 	path = get_env();
+
 	if (!path)
 		return (NULL);
 	rout = tk_cm(path, "=:");
 	while (rout[i] != NULL)
 	{
-		if (stat(comd, &st) == 0)
-		{
-			comand = strdup(comd);
-			free(rout);
-			free(path);
-			return (comand);
-		}
 		comand = malloc(sizeof(char) * (strlen(rout[i]) + strlen(comd) + 2));
 		if (comand == NULL)
 		{
