@@ -31,7 +31,7 @@ typedef struct built_in
 char *get_command(void);
 char **tk_cm(char *comand, char *delim);
 void free_tokens(char **token);
-int count_word(char *strn);
+int _word(char *strn);
 int (*get_built_in(char *s))(void);
 int exit_func(void);
 int env_func(void);

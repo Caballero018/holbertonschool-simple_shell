@@ -4,7 +4,7 @@
  * @strn: is a pointer of the incoming string
  * Return: the number of words
  */
-int count_word(char *strn)
+int _word(char *strn)
 {
 	int count = 0;
 	int word = 0;
@@ -50,7 +50,7 @@ char **tk_cm(char *comand, char *delim)
 	char **token = NULL;
 	int i, word = 0;
 
-	word = count_word(comand);
+	word = _word(comand);
 
 	token = _calloc((word + 1), sizeof(char *));
 	if (token == NULL)
