@@ -12,7 +12,7 @@ char *get_env(void)
 	int i = 0;
 	char *path = NULL;
 
-	while (environ[i])
+	while (environ && environ[i])
 	{
 		if (strncmp(environ[i], "PATH", 4) == 0)
 		{

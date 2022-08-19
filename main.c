@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int (*func)();
+	int (*func)() = NULL;
 	char *pront = "(╬ ಠ益ಠ): ", *command = NULL, **list_token = NULL;
 	char *path = NULL;
 
