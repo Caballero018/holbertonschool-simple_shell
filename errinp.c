@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * error_input - deasa
+ * error_input - Function that prints error messages.
  *
- * @err_no: erres
- * @copy: dsf
+ * @copy: Copy.
  */
 void error_input(char *copy)
 {

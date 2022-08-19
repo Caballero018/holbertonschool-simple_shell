@@ -1,5 +1,11 @@
 #include "main.h"
 /**
+ * execut - Function that create a parent and child process (fork).
+ *
+ * @list_token: list token.
+ * @path: Path
+ *
+ * Return: status.
  */
 int execut(char **list_token, char *path)
 {

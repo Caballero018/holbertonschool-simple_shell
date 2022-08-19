@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * count_word - count a word in the string
+ * _word - Function that counts the amount of words
+ * that the command has according to the spaces.
+ *
  * @strn: is a pointer of the incoming string
  * Return: the number of words
  */
@@ -26,6 +28,10 @@ int _word(char *strn)
 }
 
 /**
+ * free_tokens - Function that releases the token, iteration
+ * by iteration until reaching null.
+ *
+ * @token: token
  */
 void free_tokens(char **token)
 {
@@ -40,7 +46,7 @@ void free_tokens(char **token)
 }
 
 /**
- * **tk_cm - is the tokenize of the line
+ * tk_cm - Function that splits a string based on the delimiter.
  * @comand: is a pointer the command received
  * @delim: is a pointer to the delimiter of the tokenize
  * Return: 0 for free, and return the result of the tokenize
