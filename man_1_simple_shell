@@ -1,0 +1,51 @@
+.TH hsh 1 "19 Agosto 2022" "1.0" "simple shell man page"
+
+.SH NAME
+
+.B simple shell - hsh
+- a simple UNIX command interpreter
+.SH SYNOPSIS
+.B ./hsh
+.SH DESCRIPTION
+This program is a UNIX command interpreter.
+.SS Overview
+It is a program that reads lines after the prompt that receives the commands to be interpreted and this is kept in an infinite loop for constant execution.
+.SS Path Search
+When locating a command, this shell first looks to see if it has an executable by that name in the PATH of env. Then it looks for builtin commands by that name.
+.SH ENVIROMENT
+Enviroment variables affect the execution of 
+.B shell
+:
+ENV - Initializacion file for interactive shells
+.B exit
+builtin is used with a numeric argument, it will return the argument
+
+.SH MODES
+.B hsh
+Interactive mode
+.SS
+EXAMPLE:
+$ ls -l
+.B ./hsh
+Non-interactive mode
+.SS
+EXAMPLE:
+$ echo "ls -l" | ./hsh
+
+.SH COMPATILIBITY
+Simple_shell tries to emulate sh when invoked as sh, to run it you must clone the repository, compile and run the compiled file as follows:
+.PP
+\fBgcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+.SH SEE ALSO
+.I sh(1), Betty(1)
+
+.SH AUTHORS
+.PP
+.PD 0
+.TP
+\fBSimple_shell\fP was written by:
+.TP
+JUAN GARCIA   \fB<https://github.com/JuanGarcia0418>\fP
+.TP
+ALEJANDRO CABALLERO   \fB<https://github.com/Caballero018>\fP
+.PD
