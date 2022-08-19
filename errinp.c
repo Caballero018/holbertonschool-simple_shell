@@ -7,7 +7,7 @@
  */
 void error_input(char *copy)
 {
-	char *msj_error;
+	char *msj_error = NULL;
 	int length = 0;
 
 	msj_error = malloc((sizeof(char) * strlen(copy)) + 9);
