@@ -42,5 +42,6 @@ int execut(char **list_token, char *path);
 char *get_env(void);
 void freess(char *path, char **list_token);
 void freesss(char *path, char **list_token, char *command);
+void *_calloc(unsigned int nmemb, unsigned int size);
 
 #endif /* MAIN_H */

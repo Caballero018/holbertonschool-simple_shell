@@ -10,7 +10,7 @@ void error_input(char *copy)
 	char *msj_error = NULL;
 	int length = 0;
 
-	msj_error = calloc((strlen(copy) + 23), sizeof(char));
+	msj_error = _calloc((strlen(copy) + 23), sizeof(char));
 	if (msj_error == NULL)
 	{
 		free(msj_error);

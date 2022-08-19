@@ -49,7 +49,7 @@ char *path_d(char *comd)
 	rout = tk_cm(path, "=:");
 	while (rout[i] != NULL)
 	{
-		comand = calloc((strlen(rout[i]) + strlen(comd) + 2), sizeof(char));
+		comand = _calloc((strlen(rout[i]) + strlen(comd) + 2), sizeof(char));
 		if (comand == NULL)
 		{
 			free(comand);

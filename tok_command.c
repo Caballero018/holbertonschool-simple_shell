@@ -52,7 +52,7 @@ char **tk_cm(char *comand, char *delim)
 
 	word = count_word(comand);
 
-	token = calloc((word + 1), sizeof(char *));
+	token = _calloc((word + 1), sizeof(char *));
 	if (token == NULL)
 	{
 		return (NULL);
