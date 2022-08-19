@@ -84,6 +84,30 @@ ___
 6. We verify if we are working in the shell that we have created.
 7. We execute. We use the PATH and create a ```parent``` and ```child``` process via ```fork```.
 
+[**Flowchart**](https://miro.com/welcomeonboard/Y2NFcFdoN2Vrckl0bnFoSWFUMDduOFM5TlVXc3Rydk5PZmNIZFVuMWJ6MkhOSUFlalZrRlJsYnhwTlVHZ2NmUnwzNDU4NzY0NTMwNjg0MzUwOTM1?share_link_id=28254165061)
+
+## Functions
+
+| Function | Description |
+| ------ | ------|
+| env_func | Function that look for a builtin (env). |
+| exit_func | Function that look for a builtin (exit). |
+| get_built_in | Function that uses the env and exit functions. |
+| check_built_in | Function that acts according to whether or not the command exists. |
+| word | Function that counts the amount of words that the command has according to the spaces. |
+| tk_cm | Function that splits a string based on the delimiter. |
+| error_input | Function that prints error messages. |
+| execut | Function that create a parent and child process (fork). |
+| _calloc |  Function that allocates memory for an array, using malloc. |
+| path_d | values PATH |
+| main | Function where interactive and non-interactive mode is performed within an infinite loop. |
+| free_tokens | Function that releases the token, iteration by iteration until reaching null. |
+| fress | Function that free the path and the list_token. |
+| fresss | Function that free the path, the list_token and the command. |
+| get_env | get a environ variable |
+| get_command | This function read the input line |
+
+
 <a href = 'https://www.github.com/Crisgrva'> <img width = '32px' align= 'center' src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/github.svg"/></a> [@Alejandro Caballero](https://github.com/Caballero018) | [@Juan García](https://github.com/JuanGarcia0418)
 
 <a href = 'https://www.twitter.com/crisgrvc'> <img width = '32px' align= 'center' src="https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/twitter.svg"/></a> [@Alejandro](https://twitter.com/Alejand51178128) | [@Juan]()
