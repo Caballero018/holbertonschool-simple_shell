@@ -18,13 +18,13 @@ int env_func(void)
 {
 	int i = 0;
 
-	while (environ[i])
+	while (environ && environ[i])
 	{
 		write(STDOUT_FILENO, environ[i], strlen(environ[i]));
 		write(STDOUT_FILENO, "\n", 1);
 		i++;
 	}
-	return (0);
+	return (1);
 }
 
 /**
