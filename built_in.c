@@ -10,7 +10,7 @@ int exit_func(void)
 }
 
 /**
- * env_func - write variable enviromen.
+ * env_func - Function that look for a builtin (env).
  *
  * Return: 0.
  */
@@ -51,7 +51,8 @@ int (*get_built_in(char *s))(void)
 }
 
 /**
- * check_built_in - check built in
+ * check_built_in - Function that acts according to whether or not the
+ * command exists.
  *
  * @f: Function to check.
  * @buffer: Space in memory.
